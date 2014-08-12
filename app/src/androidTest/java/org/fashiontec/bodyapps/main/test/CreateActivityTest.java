@@ -52,34 +52,34 @@ public class CreateActivityTest extends ActivityInstrumentationTestCase2<CreateA
     }
 
     public void testMeasurementActivity() throws Exception {
-        getActivity().runOnUiThread(new Runnable() {
+    //     getActivity().runOnUiThread(new Runnable() {
 
-            @Override
-            public void run() {
-                name.setText("test_name");
-            }
-        });
+    //         @Override
+    //         public void run() {
+    //             name.setText("test_name");
+    //         }
+    //     });
 
-        getInstrumentation().waitForIdleSync();
-        assertEquals("Name incorrect", "test_name", name.getText().toString());
+    //     getInstrumentation().waitForIdleSync();
+    //     assertEquals("Name incorrect", "test_name", name.getText().toString());
 
-        getActivity().runOnUiThread(new Runnable() {
+    //     getActivity().runOnUiThread(new Runnable() {
 
-            @Override
-            public void run() {
-                email.setText("test@email.com");
-            }
-        });
+    //         @Override
+    //         public void run() {
+    //             email.setText("test@email.com");
+    //         }
+    //     });
 
-        getInstrumentation().waitForIdleSync();
-        assertEquals("Email incorrect", "test@email.com", email.getText().toString());
-        Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(MeasurementActivity.class.getName(), null, false);
-        activity.setData();
+    //     getInstrumentation().waitForIdleSync();
+    //     assertEquals("Email incorrect", "test@email.com", email.getText().toString());
+    //     Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(MeasurementActivity.class.getName(), null, false);
+    //     activity.setData();
 
-        MeasurementActivity startedActivity = (MeasurementActivity) monitor.waitForActivityWithTimeout(3000);
-        assertNotNull("MeasurementActivity not started", startedActivity);
+    //     MeasurementActivity startedActivity = (MeasurementActivity) monitor.waitForActivityWithTimeout(3000);
+    //     assertNotNull("MeasurementActivity not started", startedActivity);
 
-        this.sendKeys(KeyEvent.KEYCODE_BACK);
-        this.sendKeys(KeyEvent.KEYCODE_BACK);
-    }
+    //     this.sendKeys(KeyEvent.KEYCODE_BACK);
+    //     this.sendKeys(KeyEvent.KEYCODE_BACK);
+    // }
 }
