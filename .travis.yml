@@ -9,6 +9,7 @@ before_install:
 android:
   components:
     - build-tools-19.1.0
+    - extra-google-google_play_services
   licenses:
     - android-sdk-license-5be876d5
 
