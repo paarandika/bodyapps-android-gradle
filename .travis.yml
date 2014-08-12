@@ -6,11 +6,20 @@ env:
 
 before_install:
  - chmod +x gradlew
+language: android
 android:
   components:
-    - build-tools-19.1.0
+    - build-tools-20.0.0
+    - android-19
+    - add-on
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
+    - addon-google_apis-google-19
   licenses:
-    - android-sdk-license-5be876d5
+    - 'android-sdk-preview-license-52d11cd2'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
 
 before_script:
   # Create and start emulator
