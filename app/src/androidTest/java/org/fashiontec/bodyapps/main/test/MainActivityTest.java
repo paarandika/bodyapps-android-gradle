@@ -61,24 +61,24 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         this.sendKeys(KeyEvent.KEYCODE_BACK);
     }
 
-    // public void testSettingsActivity() throws Exception {
-    //     Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(SettingsActivity.class.getName(), null, false);
-    //     TouchUtils.clickView(this, settings);
-    //     SettingsActivity startedActivity = (SettingsActivity) monitor.waitForActivityWithTimeout(1000);
-    //     assertNotNull(startedActivity);
-    //     this.sendKeys(KeyEvent.KEYCODE_BACK);
-    // }
+    public void testSettingsActivity() throws Exception {
+        Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(SettingsActivity.class.getName(), null, false);
+        TouchUtils.clickView(this, settings);
+        SettingsActivity startedActivity = (SettingsActivity) monitor.waitForActivityWithTimeout(1000);
+        assertNotNull(startedActivity);
+        this.sendKeys(KeyEvent.KEYCODE_BACK);
+    }
 
-    // public void testCreateActivity() throws Exception {
-    //     Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(CreateActivity.class.getName(), null, false);
-    //     TouchUtils.clickView(this, create);
-    //     CreateActivity startedActivity = (CreateActivity) monitor.waitForActivityWithTimeout(1000);
-    //     EditText email = (EditText) startedActivity.findViewById(R.id.create_txt_gmail);
-    //     InputMethodManager imm = (InputMethodManager)activity.getBaseContext().getSystemService(
-    //             activity.getBaseContext().INPUT_METHOD_SERVICE);
-    //     imm.hideSoftInputFromWindow(email.getWindowToken(), 0);
-    //     assertNotNull(startedActivity);
-    //     this.sendKeys(KeyEvent.KEYCODE_BACK);
-    // }
+    public void testCreateActivity() throws Exception {
+        Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(CreateActivity.class.getName(), null, false);
+        TouchUtils.clickView(this, create);
+        CreateActivity startedActivity = (CreateActivity) monitor.waitForActivityWithTimeout(1000);
+        EditText email = (EditText) startedActivity.findViewById(R.id.create_txt_gmail);
+        InputMethodManager imm = (InputMethodManager)activity.getBaseContext().getSystemService(
+                activity.getBaseContext().INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(email.getWindowToken(), 0);
+        assertNotNull(startedActivity);
+        this.sendKeys(KeyEvent.KEYCODE_BACK);
+    }
 
 }
