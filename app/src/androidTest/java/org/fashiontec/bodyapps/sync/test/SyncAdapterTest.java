@@ -20,10 +20,10 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 public class SyncAdapterTest extends AndroidTestCase {
-    Context context;
-    public static final String AUTHORITY = "org.fashiontec.bodyapps.sync.provider";
-    public static final String ACCOUNT_TYPE = "fashiontec.org";
-    public static final String ACCOUNT = "dummyaccount";
+    // Context context;
+    // public static final String AUTHORITY = "org.fashiontec.bodyapps.sync.provider";
+    // public static final String ACCOUNT_TYPE = "fashiontec.org";
+    // public static final String ACCOUNT = "dummyaccount";
 
     // @Override
     // public void setUp() throws Exception {
