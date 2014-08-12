@@ -51,7 +51,7 @@ public class CreateActivityTest extends ActivityInstrumentationTestCase2<CreateA
         assertNotNull(gender);
     }
 
-    public void testMeasurementActivity() throws Exception {
+    // public void testMeasurementActivity() throws Exception {
     //     getActivity().runOnUiThread(new Runnable() {
 
     //         @Override
