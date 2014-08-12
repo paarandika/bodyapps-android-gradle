@@ -47,19 +47,19 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         UserManager.getInstance(getActivity().getApplicationContext()).addUser(user);
     }
 
-    // @SmallTest
-    // public void testButtons() throws Exception {
-    //     Boolean val = create != null && saved != null && settings != null && exit != null;
-    //     assertTrue(val);
-    // }
+    @SmallTest
+    public void testButtons() throws Exception {
+        Boolean val = create != null && saved != null && settings != null && exit != null;
+        assertTrue(val);
+    }
 
-    // public void testSavedActivity() throws Exception {
-    //     Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(SavedActivity.class.getName(), null, false);
-    //     TouchUtils.clickView(this, saved);
-    //     SavedActivity startedActivity = (SavedActivity) monitor.waitForActivityWithTimeout(1000);
-    //     assertNotNull(startedActivity);
-    //     this.sendKeys(KeyEvent.KEYCODE_BACK);
-    // }
+    public void testSavedActivity() throws Exception {
+        Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(SavedActivity.class.getName(), null, false);
+        TouchUtils.clickView(this, saved);
+        SavedActivity startedActivity = (SavedActivity) monitor.waitForActivityWithTimeout(1000);
+        assertNotNull(startedActivity);
+        this.sendKeys(KeyEvent.KEYCODE_BACK);
+    }
 
     // public void testSettingsActivity() throws Exception {
     //     Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(SettingsActivity.class.getName(), null, false);
