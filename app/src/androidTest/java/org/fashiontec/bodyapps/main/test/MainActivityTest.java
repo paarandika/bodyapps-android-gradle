@@ -43,8 +43,8 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         saved = (Button) activity.findViewById(R.id.main_btn_saved);
         settings = (Button) activity.findViewById(R.id.main_btn_settings);
         exit = (Button) activity.findViewById(R.id.main_btn_exit);
-        User user=new User("test_email","test_name","test_id",true);
-        UserManager.getInstance(getActivity().getApplicationContext()).addUser(user);
+        // User user=new User("test_email","test_name","test_id",true);
+        // UserManager.getInstance(getActivity().getApplicationContext()).addUser(user);
     }
 
     // @SmallTest
