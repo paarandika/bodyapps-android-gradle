@@ -80,5 +80,6 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         assertNotNull(startedActivity);
         this.sendKeys(KeyEvent.KEYCODE_BACK);
     }
+    
 
 }
